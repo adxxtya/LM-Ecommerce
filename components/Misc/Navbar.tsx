@@ -33,8 +33,8 @@ const Navbar: React.FC = () => {
     <div
       ref={stickyDivRef}
       className={twMerge(
-        "sticky top-0 flex justify-center h-20 hover:bg-red-400 hover:border-b hover:border-black transition-all duration-700",
-        navbarHovered ? "bg-red-400 border-b border-black" : "bg-transparent"
+        "sticky top-0 z-[9999999] flex justify-center h-20 hover:bg-green-400 hover:border-b hover:border-black transition-all duration-700",
+        navbarHovered ? "bg-green-400 border-b border-black" : "bg-transparent"
       )}
       onMouseEnter={() => setNavbarHovered(true)}
       onMouseLeave={() => setNavbarHovered(false)}
@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
           className=""
           style={{ visibility: navbarHovered ? "visible" : "hidden" }}
         >
-          <ul className="flex space-x-10">
+          <ul className="hidden md:flex space-x-10">
             <li className="border-expand text-sm">Item 1</li>
             <li className="border-expand text-sm">Item 2</li>
             <li className="border-expand text-sm">Item 3</li>
